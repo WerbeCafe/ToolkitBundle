@@ -77,7 +77,7 @@ abstract class AbstractBaseController extends Controller
      * @param string $role
      * @return bool
      */
-    protected function isGranted($role)
+    protected function isGranted($role, $object = NULL)
     {
         return $this->get('security.context')->isGranted($role);
     }
